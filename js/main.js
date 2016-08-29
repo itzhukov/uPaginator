@@ -6,8 +6,8 @@ var uPaginator = new UPaginator;
 
 uPaginator.setData({
 	renderSelector: '.uPaginator',
-	page_count: 50,
-	page_current: 3,
+	page_count: 70,
+	page_current: 7,
 	onchange: function (uPaginator) {
 		let page_count = uPaginator.data.page_count;
 		let page_current = uPaginator.data.page_current;

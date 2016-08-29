@@ -14,7 +14,7 @@ function exceptionLog (error) {
 // Сборка js
 gulp.task('webpack', function() {
 	gulp.src('./js/main.js')
-		.pipe( webpack( require('./webpack.config.js') ).on('error', exceptionLog) )
+		.pipe( webpack(webpackConfig).on('error', exceptionLog) )
 		.pipe(gulp.dest('./public/js/'));
 });
 
