@@ -23,7 +23,7 @@ var config = {
 			path.resolve(__dirname, 'js/'),
 		],
 		alias: {
-			'uPaginator': 'js/uPaginator'
+			'UPaginator': 'js/modules/UPaginator'
 		}
 	},
 	noParse: [
@@ -43,12 +43,14 @@ var config = {
 					path.resolve(__dirname, 'js/')
 				],
 				plugins: [
+					'transform-react-inline-elements',
+					'transform-react-constant-elements',
 					'transform-runtime',
 					'syntax-object-rest-spread'
 				],
 				query: {
 					cacheDirectory: true,
-					presets: ["es2015", "stage-0"]
+					presets: ["es2015", "stage-0", "react"]
 				}
 			}
 		],

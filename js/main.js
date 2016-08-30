@@ -1,21 +1,22 @@
 'use strict'
 
-import UPaginator from "./uPaginator.js";
+import React from "react";
+import ReactDOM from "react-dom";
+import UPaginator from 'UPaginator';
 
-var uPaginator = new UPaginator;
-
-uPaginator.setData({
-	renderSelector: '.uPaginator',
-	page_count: 70,
-	page_current: 7,
-	onchange: function (uPaginator) {
-		let page_count = uPaginator.data.page_count;
-		let page_current = uPaginator.data.page_current;
-		let page_current_prev = uPaginator.data.page_current_prev;
-
-		console.log('page: ', page_current, '/', page_count);
+class App extends React.Component {
+	constructor() {
+		super();
 	}
-});
+
+	render() {
+		return (
+			<UPaginator pageCurrent={25} pageCount={58} />
+		);
+	}
+}
+
+ReactDOM.render(<App />, document.querySelector('#App') );
 
 /* ================================= exports ================================= */
 
