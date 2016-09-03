@@ -2,7 +2,7 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-import UPaginator from 'UPaginator';
+import UPaginator from './UPaginator';
 
 class App extends React.Component {
 	constructor() {
